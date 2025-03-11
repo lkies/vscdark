@@ -1,7 +1,7 @@
 [project]
 name = "vscdark"
-version = "0.3.1"
-description = ""
+version = "0.3.2"
+description = "Matplotlib and Ipywidgets dark theme/styling that fits well with VSCode"
 authors = [
     {name = "Lorenz Kies",email = "dev@lkies.net"}
 ]

@@ -12,7 +12,7 @@ The style can be applied using matplotlib's `plt.style.use` function:
 plt.style.use('vscdark.vscdark')
 ```
 
-If styling for interactive plots is also desired the provided `set_style` function should be used:
+If styling for interactive plots is also desired, the provided `set_style` function should be used:
 
 ```python
 def set_style(new_theme: str | None = None, dark: bool | None = None, display_css: bool = True, verbose: bool | None = None) -> None:
