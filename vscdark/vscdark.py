@@ -15,16 +15,16 @@ def set_style(
     global theme_is_dark
     global verbose_css
 
+    if new_theme == "vscdark":
+        new_theme = "vscdark.vscdark"
+        dark = True if dark is None else dark
+    elif new_theme == "vsclight":
+        new_theme = "vscdark.vsclight"
+        dark = False if dark is None else dark
+
     theme = theme if new_theme is None else new_theme
     theme_is_dark = theme_is_dark if dark is None else dark
     verbose_css = verbose_css if verbose is None else verbose
-
-    if theme == "vscdark":
-        theme = "vscdark.vscdark"
-        dark = True if dark is None else dark
-    elif theme == "vsclight":
-        theme = "vscdark.vsclight"
-        dark = False if dark is None else dark
 
     plt.style.use(theme)
 
@@ -40,8 +40,8 @@ def css() -> HTML:
         "div.jupyter-widgets.widget-label {display: none;}"
         + (
             ".widget-label {color: white !important;}"
-            ".widget-readout {color:white; !important; }"
-            ".widget-output {color:white; !important; }"
+            ".widget-readout {color: white; !important;}"
+            ".widget-output {color: white; !important;}"
             if theme_is_dark
             else ""
         )
